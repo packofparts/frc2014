@@ -2,6 +2,8 @@
 
 #include "Commands/Drive/ResetGyroHeadingCommand.h"
 #include "Commands/Drive/ToggleFieldRelativeCommand.h"
+#include "Commands/GameMech/Sweeper/SweeperDownCommand.h"
+#include "Commands/GameMech/Sweeper/SweeperUpCommand.h"
 
 #include "math.h"
 
@@ -47,6 +49,14 @@ OI::OI()
 	
 	JoystickButton* toggleFieldRelative = new JoystickButton(xbox, JOYSTICK_BUTTON_TOGGLE_FIELD_RELATIVE);
 	toggleFieldRelative->WhenPressed(new ToggleFieldRelativeCommand());
+	
+	
+	
+	bear = new Joystick(JOYSTICK_BEAR);
+	
+	JoystickButton* sweeperSwing = new JoystickButton(bear, JOYSTICK_BEAR_BUTTON_ENABLE_SWEEPER);
+	sweeperSwing->WhenPressed(new SweeperDownCommand());
+	sweeperSwing->WhenReleased(new SweeperUpCommand());
 }
 
 float OI::GetTranslateX()
@@ -63,6 +73,13 @@ float OI::GetRotate()
 {
 	return -dz(this->xbox->GetAxis((Joystick::AxisType)JOYSTICK_XBOX_AXIS_ROT));
 }
+
+float OI::GetSweep()
+{
+	//return this->xbox->GetAxis((Joystick::AxisType)2);
+	return this->bear->GetAxis((Joystick::AxisType)JOYSTICK_BEAR_AXIS_SWEEP);
+}
+
 
 void OI::PrintInputs()
 {

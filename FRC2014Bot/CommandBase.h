@@ -3,6 +3,8 @@
 
 #include "Commands/Command.h"
 #include "Subsystems/Drive/MecanumDriveSubsystem.h"
+#include "Subsystems/GameMech/ShooterSubsystem.h"
+#include "Subsystems/GameMech/SweeperSubsystem.h"
 #include "Subsystems/Drive/GyroSubsystem.h"
 #include "OI.h"
 
@@ -18,8 +20,12 @@ public:
 	static void init();
 	// Create a single static instance of all of your subsystems
 	static MecanumDriveSubsystem* mecanumDrive;
+	static SweeperSubsystem* sweeper;
+	static ShooterSubsystem* shooter;
+	
 	static GyroSubsystem* gyro;
 	static OI *oi;
+	
 };
 
 #endif

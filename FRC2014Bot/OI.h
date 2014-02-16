@@ -7,11 +7,15 @@
 class OI {
 private:
 	Joystick* xbox;
+	Joystick* bear;
 public:
 	OI();
 	float GetTranslateX();
 	float GetTranslateY();
 	float GetRotate();
+	
+	float GetSweep();
+	
 	void PrintInputs();
 };
 

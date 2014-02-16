@@ -1,31 +1,37 @@
-#include "PrintAllInputCommand.h"
+#include "SweeperDownCommand.h"
 
-PrintAllInputCommand::PrintAllInputCommand() {
+SweeperDownCommand::SweeperDownCommand()
+{
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
 }
 
 // Called just before this Command runs the first time
-void PrintAllInputCommand::Initialize() {
-	
+void SweeperDownCommand::Initialize()
+{
+	sweeper->SetSweeperSwing(true);
 }
 
 // Called repeatedly when this Command is scheduled to run
-void PrintAllInputCommand::Execute() {
-	oi->PrintInputs();
+void SweeperDownCommand::Execute()
+{
+
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool PrintAllInputCommand::IsFinished() {
-	return false;
+bool SweeperDownCommand::IsFinished()
+{
+	return true;
 }
 
 // Called once after isFinished returns true
-void PrintAllInputCommand::End() {
-	
+void SweeperDownCommand::End()
+{
+
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void PrintAllInputCommand::Interrupted() {
+void SweeperDownCommand::Interrupted()
+{
 }

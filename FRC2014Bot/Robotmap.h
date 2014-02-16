@@ -19,6 +19,22 @@
 #define DRIVE_REAR_RIGHT 5
 
 // *******************
+//      Game Mech
+// *******************
+#define WINCH_MOTOR 6
+#define WINCH_CLUTCH_SOLENOID 0
+
+#define SWEEPER_MOTOR 7
+#define SWEEPER_SOLENOID 1
+
+// *****************
+//	   Compressor
+// *****************
+
+#define COMPRESSOR_SPIKE 1
+#define COMPRESSOR_TRANSDUCER 1
+
+// *******************
 //		  Gyro
 // *******************
 
@@ -41,5 +57,12 @@
 #define JOYSTICK_DEADZONE_ENABLE 0
 #define JOYSTICK_DEADZONE 0.2
 #define JOYSTICK_POWER 2
+
+
+#define JOYSTICK_BEAR 2
+#define JOYSTICK_BEAR_AXIS_SWEEP 0
+#define JOYSTICK_BEAR_BUTTON_ENABLE_SWEEPER 3
+#define JOYSTICK_BEAR_BUTTON_FIRE 4
+#define JOYSTICK_BEAR_BUTTON_KILL 5
 
 #endif

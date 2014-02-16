@@ -1,16 +1,17 @@
-#ifndef PRINTALLINPUTCOMMAND_H
-#define PRINTALLINPUTCOMMAND_H
+#ifndef SWEEPERDOWNCOMMAND_H
+#define SWEEPERDOWNCOMMAND_H
 
-#include "../CommandBase.h"
+#include "../../../CommandBase.h"
 
 /**
  *
  *
  * @author Matthew
  */
-class PrintAllInputCommand: public CommandBase {
+class SweeperDownCommand: public CommandBase
+{
 public:
-	PrintAllInputCommand();
+	SweeperDownCommand();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
