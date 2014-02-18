@@ -1,6 +1,5 @@
 #include "WPILib.h"
 #include "Commands/Command.h"
-#include "Commands/PrintAllInputCommand.h"
 #include "Commands/Drive/MecanumDriveBaseCommand.h"
 #include "Commands/GameMech/Sweeper/SweeperMotorCommand.h"
 #include "CommandBase.h"
@@ -17,7 +16,7 @@ private:
 	virtual void RobotInit()
 	{
 		CommandBase::init();
-		autonomousCommand = new PrintAllInputCommand();
+		//autonomousCommand = new PrintAllInputCommand();
 		mecanum = new MecanumDriveBaseCommand();
 		sweeper = new SweeperMotorCommand();
 		compressor = new Compressor(COMPRESSOR_TRANSDUCER, COMPRESSOR_SPIKE);

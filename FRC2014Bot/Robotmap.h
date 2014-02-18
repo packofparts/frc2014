@@ -25,7 +25,7 @@
 #define WINCH_CLUTCH_SOLENOID 0
 
 #define SWEEPER_MOTOR 7
-#define SWEEPER_SOLENOID 1
+#define SWEEPER_SOLENOID 8
 
 // *****************
 //	   Compressor
