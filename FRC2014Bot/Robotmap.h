@@ -65,4 +65,10 @@
 #define JOYSTICK_BEAR_BUTTON_FIRE 4
 #define JOYSTICK_BEAR_BUTTON_KILL 5
 
+// ********************
+//	    Autonomous
+// ********************
+
+#define AUTONOMOUS_DRIVE_TIME 3.14159
+
 #endif
