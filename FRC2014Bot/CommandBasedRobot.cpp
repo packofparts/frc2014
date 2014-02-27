@@ -2,6 +2,7 @@
 #include "Commands/Command.h"
 #include "Commands/Drive/MecanumDriveBaseCommand.h"
 #include "Commands/GameMech/Sweeper/SweeperMotorCommand.h"
+#include "Commands/Autonomous/AutonomousCommandGroup.h"
 #include "CommandBase.h"
 
 class CommandBasedRobot: public IterativeRobot
@@ -16,7 +17,7 @@ private:
 	virtual void RobotInit()
 	{
 		CommandBase::init();
-		//autonomousCommand = new PrintAllInputCommand();
+		autonomousCommand = new AutonomousCommandGroup();
 		mecanum = new MecanumDriveBaseCommand();
 		sweeper = new SweeperMotorCommand();
 		compressor = new Compressor(COMPRESSOR_TRANSDUCER, COMPRESSOR_SPIKE);
