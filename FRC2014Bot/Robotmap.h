@@ -69,6 +69,7 @@
 //	    Autonomous
 // ********************
 
-#define AUTONOMOUS_DRIVE_TIME 3.14159
+#define AUTONOMOUS_DRIVE_TIME (3.14159 * 1.5)
+#define AUTONOMOUS_DRIVE_SPEED -0.3f
 
 #endif
