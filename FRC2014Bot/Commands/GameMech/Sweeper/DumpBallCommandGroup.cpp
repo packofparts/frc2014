@@ -1,5 +1,7 @@
 #include "DumpBallCommandGroup.h"
 #include "SweeperDownCommand.h"
+#include "SweeperUpCommand.h"
+#include "../../Autonomous/DelayCommand.h"
 #include "SetSweeperCommand.h"
 
 DumpBallCommandGroup::DumpBallCommandGroup()
